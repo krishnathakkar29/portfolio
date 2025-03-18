@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Spotlight } from "../ui/spotlight";
 
 export default function HeroSection() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -28,6 +29,16 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-dot-white/[0.2]">
       {/* Radial gradient for the container to give a faded look */}
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+
+      {/* <Spotlight
+        className="-top-40 left-0 md:left-60 opacity-40 md:opacity-100"
+        fill="white"
+      /> */}
+
+      <Spotlight
+        className="-top-40 left-0 md:-top-20 md:left-60"
+        fill="white"
+      />
 
       {/* Animated background blobs */}
       <div className="absolute inset-0 max-w-full">
@@ -100,7 +111,11 @@ export default function HeroSection() {
               </Button>
             </Link>
             <Link href="#contact">
-              <Button size="lg" variant="outline" className="group px-8 rounded-xl">
+              <Button
+                size="lg"
+                variant="outline"
+                className="group px-8 rounded-xl"
+              >
                 Contact Me
                 <Mail className="ml-2 h-4 w-4 transition-transform group-hover:scale-110" />
               </Button>

@@ -11,6 +11,7 @@ import {
   Webhook,
   Globe,
   Sparkles,
+  Code,
 } from "lucide-react";
 
 export default function AboutSection() {
@@ -29,9 +30,9 @@ export default function AboutSection() {
       color: "text-purple-500",
     },
     {
-      name: "Database Design",
-      description: "SQL & NoSQL databases",
-      icon: Database,
+      name: "Frontend Development",
+      description: "Building dynamic and interactive user interfaces",
+      icon: Code,
       color: "text-yellow-500",
     },
   ];

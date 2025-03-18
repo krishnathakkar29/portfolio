@@ -346,6 +346,25 @@ html {
   background-position: -19px -19px;
 }
 
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  /* background: rgba(0, 0, 0, 0.3); */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(60 100% 50%); 
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
+
 @layer base {
   * {
     @apply border-border;

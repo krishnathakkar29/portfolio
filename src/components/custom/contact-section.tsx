@@ -19,9 +19,19 @@ export function ContactSection() {
     setIsSending(true);
 
     try {
-  
       setEmail("");
       setMessage("");
+
+      const res = await fetch(`${process.env.SERVER_URL}/api/portfolio/email`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          message,
+        }),
+      });
 
       toast.success("Message sent successfully!", {
         description: "Thank you for reaching out. I'll get back to you soon!",
